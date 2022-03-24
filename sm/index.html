@@ -1,0 +1,470 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Text2LIVE: Supplementary Material</title>
+<link href="./video_files/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<button style="position: fixed;right: 15px;top:  50%;height: 100px;width: 140px; font-size: 20px;" type="button"><a href="#top">Back to top</a></button> 
+<div class="container">
+  <h1 align="center">Text2LIVE: Text-Driven Layered Image and Video Editing</h1>
+	<h2 align="center">Paper ID 3228</h2>
+  <h2 align="center">Supplementary Material</h2>
+	
+  <p align="center">&nbsp;</p>
+	<a href="#top"></a>
+  <ul>
+	<li><a href="#image-results">Image Results (Section 4 and Figure 5)</a></li>
+	<li><a href="#semi-transparent">Image Results: Semi-Transparent Effects (Figure 2)</a></li>
+	<li><a href="#video-results">Video Results (Section 4 and Figure 6)</a></li>
+    <li><a href="#two-layers">Two Layers Edit (Section 4 and Figure 6)</a></li>
+    <li><a href="./pages/video_results_atlases.html">Full Video Results</a></li>
+    <li><a href="./pages/ablation_and_comparisons_index.html">Green-Screen Ablation (Section 4 and Figure 6)</a></li>
+    <li><a href="./pages/ablation_and_comparisons_index.html#image-baselines">Comparison to Image Baselines (Section 4)</a></li>
+	<li><a href="./pages/ablation_and_comparisons_index.html#prior-work-stylegan">Prior Work: StyleGAN Image Manipulation</a></li>
+    <li><a href="./pages/ablation_and_comparisons_index.html#video-baselines">Comparison to Video Baselines (Section 4)</a></li>
+    <li><a href="./SM.pdf">Supplementary Document</a></li>
+  </ul>
+  <p><br><span class="emph">We recommend watching all images and videos in full screen. Click on the images or videos for seeing them in full scale.</span></p>
+	
+  <p>&nbsp;</p>
+  <hr>
+	
+	<h2 align="left"><a name="image-results" id="image-results"></a>Image Results</h2>
+  <p align="left">Sample results of our image framework (part of which are shown in Fig. 5). Note how objects are "painted" in a semantic-aware manner, guided only by text, without any user provided masks.</p>
+  
+  <table  width="1200" align="center">
+		<tbody>
+			<th>Input image</th>
+			<th>"oreo cake"</th>
+			<th>"ice"</th>
+			<th>"brioche"</th>
+			<th>"spinach moss cake"</th>
+			<tr>
+				<th> <a href="assets/ours/cake_edits/source.jpeg" >
+					<img width="224" src = "assets/ours/cake_edits/source.jpeg"/> </a>
+				</th >
+				<th> <a href="assets/ours/cake_edits/oreo.png" >
+					<img width="224" src = "assets/ours/cake_edits/oreo.png"/> </a>
+				</th >
+				<th> <a href="assets/ours/cake_edits/ice.png" >
+					<img width="224" src = "assets/ours/cake_edits/ice.png"/> </a>
+				</th >
+
+				<th> <a href="assets/ours/cake_edits/brioche.png" >
+					<img width="224" src = "assets/ours/cake_edits/brioche.png"/> </a>
+				</th >
+				<th> <a href="assets/ours/cake_edits/spinach_moss.png" >
+					<img width="224" src = "assets/ours/cake_edits/spinach_moss.png"/> </a>
+				</th >
+		</tr>
+		</tbody>
+	</table>
+	
+	
+	<table  width="1200" align="center">
+		<tbody>
+			<th>Input image</th>
+			<th>"red velvet"</th>
+			<th>"ice"</th>
+			<th>"brioche"</th>
+			<th>"melted cheese"</th>
+			<tr>
+				<th> <a href="assets/ours/bread/source.png" >
+					<img width="224" src = "assets/ours/bread/source.png"/> </a>
+				</th >
+				<th> <a href="assets/ours/bread/red_velvet.png" >
+					<img width="224" src = "assets/ours/bread/red_velvet.png"/> </a>
+				</th >
+				<th> <a href="assets/ours/bread/ice.png" >
+					<img width="224" src = "assets/ours/bread/ice.png"/> </a>
+				</th >
+
+				<th> <a href="assets/ours/bread/brioche.png" >
+					<img width="224" src = "assets/ours/bread/brioche.png"/> </a>
+				</th >
+				<th> <a href="assets/ours/bread/melted cheese.png" >
+					<img width="224" src = "assets/ours/bread/melted cheese.png"/> </a>
+				</th >
+		</tr>
+		</tbody>
+	</table>
+	
+	
+	<table  width="1200" align="center">
+		<tbody>
+			<th>Input image</th>
+			<th>"snow"</th>
+			<th>"volcano"</th>
+			<th>"sahara"</th>
+			<th>"ocean"</th>
+			<tr>
+				<th> <a href="assets/ours/mountains/source.jpg" >
+					<img width="224" src = "assets/ours/mountains/source.jpg"/> </a>
+				</th >
+				<th> <a href="assets/ours/mountains/snow.png" >
+					<img width="224" src = "assets/ours/mountains/snow.png"/> </a>
+				</th >
+				<th> <a href="assets/ours/mountains/volcano.png" >
+					<img width="224" src = "assets/ours/mountains/volcano.png"/> </a>
+				</th >
+
+				<th> <a href="assets/ours/mountains/desert.png" >
+					<img width="224" src = "assets/ours/mountains/desert.png"/> </a>
+				</th >
+				<th> <a href="assets/ours/mountains/ocean.png" >
+					<img width="224" src = "assets/ours/mountains/ocean.png"/> </a>
+				</th >
+		</tr>
+		</tbody>
+	</table>
+	
+	
+	
+	<table  width="1200" align="center">
+		<tbody>
+			<th>Input image</th>
+			<th>"golden ball"</th>
+			<th>"wooden ball"</th>
+			<th>"stained glass ball"</th>
+			<th>"crochet ball"</th>
+			<tr>
+				<th> <a href="assets/ours/girl/girl.JPG" >
+					<img width="224" src = "assets/ours/girl/girl.JPG"/> </a>
+				</th >
+				<th> <a href="assets/ours/girl/girl_golden.png" >
+					<img width="224" src = "assets/ours/girl/girl_golden.png"/> </a>
+				</th >
+				<th> <a href="assets/ours/girl/girl_wood.png" >
+					<img width="224" src = "assets/ours/girl/girl_wood.png"/> </a>
+				</th >
+				<th> <a href="assets/ours/girl/girl_mosaic.png" >
+					<img width="224" src = "assets/ours/girl/girl_mosaic.png"/> </a>
+				</th >
+				<th> <a href="assets/ours/girl/girl_crochet.png" >
+					<img width="224" src = "assets/ours/girl/girl_crochet.png"/> </a>
+				</th >
+				</tr>
+		</tbody>
+	</table>
+	
+	<table  width="1200" align="center">
+		<tbody>
+			<th>Input image</th>
+			<th>"golden birds"</th>
+			<th>"wooden birds"</th>
+			<th>"stained glass birds"</th>
+			<th>"crochet birds"</th>
+			<tr>
+				<th> <a href="assets/ours/birds/source.jpeg" >
+					<img width="224" src = "assets/ours/birds/source.jpeg"/> </a>
+				</th >
+				<th> <a href="assets/ours/birds/gold.png" >
+					<img width="224" src = "assets/ours/birds/gold.png"/> </a>
+				</th >
+				<th> <a href="assets/ours/birds/wood.png" >
+					<img width="224" src = "assets/ours/birds/wood.png"/> </a>
+				</th >
+				<th> <a href="assets/ours/birds/glass.png" >
+					<img width="224" src = "assets/ours/birds/glass.png"/> </a>
+				</th >
+				<th> <a href="assets/ours/birds/crochet.png" >
+					<img width="224" src = "assets/ours/birds/crochet.png"/> </a>
+				</th >
+				</tr>
+		</tbody>
+	</table>
+	
+	<table  width="1200" align="center">
+		<tbody>
+			<th>Input image</th>
+			<th>"golden dolphin"</th>
+			<th>"wooden dolphin"</th>
+			<th>"orca"</th>
+			<th>"crochet dolphin"</th>
+			<tr>
+				<th> <a href="assets/ours/dolphin/source.jpg" >
+					<img width="224" src = "assets/ours/dolphin/source.jpg"/> </a>
+				</th >
+				<th> <a href="assets/ours/dolphin/golden.png" >
+					<img width="224" src = "assets/ours/dolphin/golden.png"/> </a>
+				</th >
+				<th> <a href="assets/ours/dolphin/wood.png" >
+					<img width="224" src = "assets/ours/dolphin/wood.png"/> </a>
+				</th >
+				<th> <a href="assets/ours/dolphin/orca.png" >
+					<img width="224" src = "assets/ours/dolphin/orca.png"/> </a>
+				</th >
+				<th> <a href="assets/ours/dolphin/crochet.png" >
+					<img width="224" src = "assets/ours/dolphin/crochet.png"/> </a>
+				</th >
+				</tr>
+		</tbody>
+	</table>
+	
+	
+	
+	<p>&nbsp;</p>
+	
+	<h2 align="left"><a name="semi-transparent" id="semi-transparent"></a>Image Results: Semi-Transparent Effects</h2>
+  <p align="left">Our method can generate complex semi-transparent effects. Notice the accurate localization of the fire, achieved with our bootstrapping (the localization text is "mouth").</p>
+	
+	<table  width="900" align="center">
+		<tbody>
+			<th>Input image</th>
+			<th>green screen: "fire"</th>
+			<th>composition: "fire out of bear's mouth"</th>
+			<tr>
+				<th> <a href="assets/res_layers/bear_fire/source.jpg" >
+					<img width="320" src = "assets/res_layers/bear_fire/source.jpg"/> </a>
+				</th >
+				<th> <a href="assets/res_layers/bear_fire/checkerboard.png" >
+					<img width="320" src = "assets/res_layers/bear_fire/checkerboard.png"/> </a>
+				</th >
+				<th> <a href="assets/res_layers/bear_fire/output.png" >
+					<img width="320" src = "assets/res_layers/bear_fire/output.png"/> </a>
+				</th >
+				</tr>
+		
+			<th width="368">Input image</th>
+			<th width="368">green screen: "smoke"</th>
+			<th width="448">composition: "smoking cigar"</th>
+			<tr>
+				<th> <a href="assets/res_layers/smoke/source.jpg" >
+					<img width="320" src = "assets/res_layers/smoke/source.jpg"/> </a>
+				</th >
+				<th> <a href="assets/res_layers/smoke/checkerboard.png" >
+					<img width="320" src = "assets/res_layers/smoke/checkerboard.png"/> </a>
+				</th >
+				<th> <a href="assets/res_layers/smoke/comp.png" >
+					<img width="320" src = "assets/res_layers/smoke/comp.png"/> </a>
+				</th >
+				</tr>
+			
+			<th width="368">Input image</th>
+			<th width="368">green screen: "fire"</th>
+			<th width="448">composition: "car on fire"</th>
+			<tr>
+				<th> <a href="assets/res_layers/car_fire/image.png" >
+					<img width="320" src = "assets/res_layers/car_fire/image.png"/> </a>
+				</th >
+				<th> <a href="assets/res_layers/car_fire/checkerboard.png" >
+					<img width="320" src = "assets/res_layers/car_fire/checkerboard.png"/> </a>
+				</th >
+				<th> <a href="assets/res_layers/car_fire/comp.png" >
+					<img width="320" src = "assets/res_layers/car_fire/comp.png"/> </a>
+				</th >
+				</tr>
+			
+			<th width="368">Input image</th>
+			<th width="368">green screen: "latte art heart pattern"</th>
+			<th width="448">composition: "latte art heart pattern"</th>
+			<tr>
+				<th> <a href="assets/res_layers/coffee/image.jpg" >
+					<img width="320" src = "assets/res_layers/coffee/image.jpg"/> </a>
+				</th >
+				<th> <a href="assets/res_layers/coffee/checkerboard.png" >
+					<img width="320" src = "assets/res_layers/coffee/checkerboard.png"/> </a>
+				</th >
+				<th> <a href="assets/res_layers/coffee/latte_heart_pattern.png" >
+					<img width="320" src = "assets/res_layers/coffee/latte_heart_pattern.png"/> </a>
+				</th >
+				</tr>
+		</tbody>
+	</table>
+	
+	<p>&nbsp;</p>
+	
+	
+	<hr>
+	
+  
+	<h2 align="left"><a name="video-results" id="video-results"></a>Video Results</h2>
+  <p align="left">We show the original video and the edited video for different kinds of target text prompts. </p>
+  
+	<h3>"Blackswan"</h3>
+	
+  <table width="1000" border="0" align="center"><tbody><tr>
+      </tr>
+	  <tr>
+		<td align="center"><video width="1200" controls="controls">
+          <source src="video_files/video_results/swan/swan_edits_compressed.mp4" type="video/mp4">
+        </video></td>
+		  
+	  </tr>
+		  </tbody>
+  </table>
+	
+  <p>&nbsp;</p>
+  
+	
+	<h3>"Giraffe"</h3>
+	
+  <table width="1000" border="0" align="center"><tbody><tr>
+      </tr>
+	  <tr>
+		<td align="center"><video width="1200" controls="controls">
+          <source src="video_files/video_results/giraffe/giraffe_edits_compressed.mp4" type="video/mp4">
+        </video></td>
+		  
+	  </tr>
+		  </tbody>
+  </table>
+  <p>&nbsp;</p>
+	
+	
+	<h3>"Lucia" - Background Edits</h3>
+	
+  <table width="1000" border="0" align="center"><tbody><tr>
+      </tr>
+	  <tr>
+		<td align="center"><video width="1200" controls="controls">
+          <source src="video_files/video_results/lucia/lucia_bg_edits_compressed.mp4" type="video/mp4">
+        </video></td>
+		  
+	  </tr>
+		  </tbody>
+  </table>
+  <p>&nbsp;</p>
+	
+	
+	<h3>"Libby"</h3>
+	
+  <table width="1000" border="0" align="center"><tbody><tr>
+      </tr>
+	  <tr>
+		<td align="center"><video width="1200" controls="controls">
+          <source src="video_files/video_results/libby/libby_edits_compressed.mp4" type="video/mp4">
+        </video></td>
+		  
+	  </tr>
+		  </tbody>
+  </table>
+  <p>&nbsp;</p>
+	
+	
+	<h3>"Car-turn" - Background Edits</h3>
+	
+  <table width="1000" border="0" align="center"><tbody><tr>
+      </tr>
+	  <tr>
+		<td align="center"><video width="1200" controls="controls">
+          <source src="video_files/video_results/car-turn/car-turn_bg_results_all_compressed.mp4" type="video/mp4">
+        </video></td>
+		  
+	  </tr>
+		  </tbody>
+  </table>
+  <p>&nbsp;</p>
+	
+	
+	
+	<h3>"Lucia" - Foreground Edits</h3>
+	
+  <table width="1000" border="0" align="center"><tbody><tr>
+      </tr>
+	  <tr>
+		<td align="center"><video width="1200" controls="controls">
+          <source src="video_files/video_results/lucia/lucia_fg_edits_compressed.mp4" type="video/mp4">
+        </video></td>
+		  
+	  </tr>
+		  </tbody>
+  </table>
+  <p>&nbsp;</p>
+	
+	
+	
+	<h3>"Car-turn" - Foreground Edits</h3>
+	
+  <table width="850" border="0" align="center"><tbody><tr>
+      </tr>
+	  <tr>
+		<td align="center"><video width="850" controls="controls">
+          <source src="video_files/video_results/car-turn/car-turn_fg_results_compressed.mp4" type="video/mp4">
+        </video></td>
+		  
+	  </tr>
+		  </tbody>
+  </table>
+  <p>&nbsp;</p>
+	
+	
+	<h3>"Boat"</h3>
+	
+  <table width="850" border="0" align="center"><tbody><tr>
+      </tr>
+	  <tr>
+		<td align="center"><video width="850" controls="controls">
+          <source src="video_files/video_results/boat/boat_edit_compressed.mp4" type="video/mp4">
+        </video></td>
+		  
+	  </tr>
+		  </tbody>
+  </table>
+  <p>&nbsp;</p>
+	
+	<h3>"Kite-surf"</h3>
+	
+  <table width="850" border="0" align="center"><tbody><tr>
+      </tr>
+	  <tr>
+		<td align="center"><video width="850" controls="controls">
+          <source src="video_files/video_results/kite-surf/kite-surf_edits_compressed.mp4" type="video/mp4">
+        </video></td>
+		  
+	  </tr>
+		  </tbody>
+  </table>
+  <p>&nbsp;</p>
+	
+	
+	<hr>
+	
+  <h2 align="left"><a name="two-layers" id="two-layers"></a>Two Layers Edit</h2>
+  <p align="left">We show here an example of editing both layers of the video (foreground and background).</p>
+  <h3>"Car-turn"</h3>
+	
+  <table width="850" border="0" align="center"><tbody><tr>
+      </tr>
+	  <tr>
+		<td align="center"><video width="850" controls="controls">
+          <source src="video_files/video_results/car-turn/car-turn_double_results_compressed.mp4" type="video/mp4">
+        </video></td>
+		  
+	  </tr>
+		  </tbody>
+  </table>
+	<table width="900" border="0" align="center"><tbody>
+		<tr>
+		<td align="center">Original atlas</td>
+		<td align="center">Edited atlas</td>
+	  </tr>
+	  <tr>
+		<td align="center"><a href="video_files/video_results/car-turn/orig_grid_atlas_fg.png"><img src="video_files/video_results/car-turn/orig_grid_atlas_fg.png" height="200"></a></td>
+		<td align="center"><a href="video_files/video_results/car-turn/atlas_composite_neon.png"><img src="video_files/video_results/car-turn/atlas_composite_neon.png" height="200"></a></td>
+	  </tr>
+		<tr>
+		<td align="center">Original atlas</td>
+		<td align="center">Edited atlas</td>
+	  </tr>
+	  <tr>
+		<td align="center"><a href="video_files/video_results/car-turn/orig_grid_atlas_masked.png"><img src="video_files/video_results/car-turn/orig_grid_atlas_masked.png" height="200"></a></td>
+		<td align="center"><a href="video_files/video_results/car-turn/masked_atlas_composite_nighttime.png"><img src="video_files/video_results/car-turn/masked_atlas_composite_nighttime.png" height="200"></a></td>
+	  </tr>
+	  
+		  </tbody>
+  </table>
+  <p>&nbsp;</p>
+	
+  
+  <p><br>
+  </p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+
+</div>
+
+</body></html>

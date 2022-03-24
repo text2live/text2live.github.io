@@ -1,0 +1,374 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Text2LIVE: Supplementary Material</title>
+<link href="../video_files/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<button style="position: fixed;right: 15px;top:  50%;height: 100px;width: 140px; font-size: 20px;" type="button"><a href="#top">Back to top</a></button>
+<div class="container">
+  <h1 align="center">Text2LIVE: Text-Driven Layered Image and Video Editing</h1>
+	<h2 align="center">Paper ID 3228</h2>
+  <h2 align="center">Supplementary Material</h2>
+	<h2 align="center">Green-Screen Ablation and Baseline Comparisons</h2>
+	
+	<a href="#top"></a>
+	<p align="center"><a href="../index.html">Back to main page</a></p>
+  <p align="center">&nbsp;</p>
+  <ul>
+	<li><a href="#gs-ablation">Green-Screen Ablation</a></li>
+	<li><a href="#image-baselines">Comparison to Image Baselines (Section 4)</a></li>
+	<li><a href="#prior-work-stylegan">Prior Work: StyleGAN Image Manipulation</a></li>
+	<li><a href="#video-baselines">Comparison to Video Baselines (Section 4)</a></li>  
+  </ul>
+  <p><br><span class="emph">We recommend watching all images and videos in full screen. Click on the images or videos for seeing them in full scale.</span></p>
+  <p>&nbsp;</p>
+  <hr>
+	
+	<h2 align="left"><a name="gs-ablation" id="gs-ablation"></a>Green-Screen Ablation</h2>
+	
+	<p align="left">We provide another ablation for our Green-Screen Loss. As discussed in Sec. 3.1., a nice property of this loss is that it allows intuitive supervision on a desired effect. For example, when generating semi-transparent effects. We can use this loss to focus on the fire regardless of the image content. Here, we used "smoking cigar" as composition text, and "smoke" for green-screen.</p>
+	
+	<table  width="1200" align="center">
+		<tbody>
+			<th>Input image</th>
+			<th>w/o green-screen</th>
+			<th>w/o green-screen (edit layer)</th>
+			<th>Full objective</th>
+			<th>Full objective (edit layer)</th>
+			<tr>
+				<th> <a href="../assets/screen_ablation/source.jpg" >
+					<img width="224" src = "../assets/screen_ablation/source.jpg"/> </a>
+				</th >
+				<th> <a href="../assets/screen_ablation/no_green_screen_comp.png" >
+					<img width="224" src = "../assets/screen_ablation/no_green_screen_comp.png"/> </a>
+				</th >
+				<th> <a href="../assets/screen_ablation/no_green_screen_checkerboard.png" >
+					<img width="224" src = "../assets/screen_ablation/no_green_screen_checkerboard.png"/> </a>
+				</th >
+				<th> <a href="../assets/res_layers/smoke/comp.png" >
+					<img width="224" src = "../assets/res_layers/smoke/comp.png"/> </a>
+				</th >
+				<th> <a href="../assets/res_layers/smoke/checkerboard.png" >
+					<img width="224" src = "../assets/res_layers/smoke/checkerboard.png"/> </a>
+				</th >
+				</tr>
+		</tbody>
+	</table>
+	
+	<p>&nbsp;</p>
+	<hr>
+	
+	
+  <h2 align="left"><a name="image-baselines" id="image-baselines"></a>Comparison to Image Baselines</h2>
+	
+	<p>To the best of our knowledge, there is no method tailored for solving our task: text-driven semantic, localized editing of existing objects in real-world images and videos. We next provide additional comparisons to several prominent text-driven image editing methods included in the human perceptual evaluation, that can be applied to a similar setting to ours: editing real-world images that are not restricted to specific domains. See discussion and human perceptual evaluation results in Sec. 4.3. </p>
+	
+	<ul>
+		<li> CLIP-Styler modifies the image in a global artistic manner, rather than performing local semantic editing.</li>
+		<li> Diffusion+CLIP can often synthesize high-quality images, but with either low-fidelity to the target text, or with low-fidelity to the input image content.</li>
+		<li> VQ-GAN+CLIP fails to maintain fidelity to the input image and produces non-realistic images.</li>
+	</ul>
+	
+	<table  width="1200" align="center">
+		<tbody>
+			<tr>
+				<th> "smoking cigar" </th>
+				<th> CLIPStyler </th>
+				<th> Diffusion+CLIP </th>
+				<th> VQ-GAN+CLIP </th>
+				<th> Ours </th>
+			</tr>
+			<tr>
+				<th> <a href = "../assets/wild/input/1.jpg" > <img width="224" src = "../assets/wild/input/1.jpg"/> </a> </th >
+				<th> <a href = "../assets/wild/CLIPStyler/1.jpg" > <img width="224" src = "../assets/wild/CLIPStyler/1.jpg"/> </a> </th >
+				<th> <a href = "../assets/wild/diffusionClip/1.jpg" > <img width="224" src = "../assets/wild/diffusionClip/1.jpg"/> </a> </th >
+				<th> <a href = "../assets/wild/vqganCLIP/1.jpg" > <img width="224" src = "../assets/wild/vqganCLIP/1.jpg"/> </a> </th >
+				<th> <a href = "../assets/wild/ours/1.jpg" > <img width="224" src = "../assets/wild/ours/1.jpg"/> </a> </th >
+			</tr>
+			<tr>
+				<th> "golden butterfly" </th>
+				<th> CLIPStyler </th>
+				<th> Diffusion+CLIP </th>
+				<th> VQ-GAN+CLIP </th>
+				<th> Ours </th>
+			</tr>
+			<tr>
+				<th> <a href = "../assets/wild/input/4.jpg" > <img width="224" src = "../assets/wild/input/4.jpg"/> </a> </th >
+				<th> <a href = "../assets/wild/CLIPStyler/4.jpg" > <img width="224" src = "../assets/wild/CLIPStyler/4.jpg"/> </a> </th >
+				<th> <a href = "../assets/wild/diffusionClip/4.jpg" > <img width="224" src = "../assets/wild/diffusionClip/4.jpg"/> </a> </th >
+				<th> <a href = "../assets/wild/vqganCLIP/4.jpg" > <img width="224" src = "../assets/wild/vqganCLIP/4.jpg"/> </a> </th >
+				<th> <a href = "../assets/wild/ours/4.jpg" > <img width="224" src = "../assets/wild/ours/4.jpg"/> </a> </th >
+			</tr>
+			<tr>
+				<th> "orca" </th>
+				<th> CLIPStyler </th>
+				<th> Diffusion+CLIP </th>
+				<th> VQ-GAN+CLIP </th>
+				<th> Ours </th>
+			</tr>
+			<tr>
+				<th> <a href = "../assets/wild/input/25.jpg" > <img width="224" src = "../assets/wild/input/25.jpg"/> </a> </th >
+				<th> <a href = "../assets/wild/CLIPStyler/25.jpg" > <img width="224" src = "../assets/wild/CLIPStyler/25.jpg"/> </a> </th >
+				<th> <a href = "../assets/wild/diffusionClip/25.jpg" > <img width="224" src = "../assets/wild/diffusionClip/25.jpg"/> </a> </th >
+				<th> <a href = "../assets/wild/vqganCLIP/25.jpg" > <img width="224" src = "../assets/wild/vqganCLIP/25.jpg"/> </a> </th >
+				<th> <a href = "../assets/wild/ours/25.jpg" > <img width="224" src = "../assets/wild/ours/25.jpg"/> </a> </th >
+			</tr>
+			<tr>
+				<th> "fire out of bear's mouth" </th>
+				<th> CLIPStyler </th>
+				<th> Diffusion+CLIP </th>
+				<th> VQ-GAN+CLIP </th>
+				<th> Ours </th>
+			</tr>
+			<tr>
+				<th> <a href = "../assets/wild/input/27.jpg" > <img width="224" src = "../assets/wild/input/27.jpg"/> </a> </th >
+				<th> <a href = "../assets/wild/CLIPStyler/27.jpg" > <img width="224" src = "../assets/wild/CLIPStyler/27.jpg"/> </a> </th >
+				<th> <a href = "../assets/wild/diffusionClip/27.jpg" > <img width="224" src = "../assets/wild/diffusionClip/27.jpg"/> </a> </th >
+				<th> <a href = "../assets/wild/vqganCLIP/27.jpg" > <img width="224" src = "../assets/wild/vqganCLIP/27.jpg"/> </a> </th >
+				<th> <a href = "../assets/wild/ours/27.jpg" > <img width="224" src = "../assets/wild/ours/27.jpg"/> </a> </th >
+			</tr>
+			<tr>
+				<th> "latte heart pattern" </th>
+				<th> CLIPStyler </th>
+				<th> Diffusion+CLIP </th>
+				<th> VQ-GAN+CLIP </th>
+				<th> Ours </th>
+			</tr>
+			<tr>
+				<th> <a href = "../assets/wild/input/41.jpg" > <img width="224" src = "../assets/wild/input/41.jpg"/> </a> </th >
+				<th> <a href = "../assets/wild/CLIPStyler/41.jpg" > <img width="224" src = "../assets/wild/CLIPStyler/41.jpg"/> </a> </th >
+				<th> <a href = "../assets/wild/diffusionClip/41.jpg" > <img width="224" src = "../assets/wild/diffusionClip/41.jpg"/> </a> </th >
+				<th> <a href = "../assets/wild/vqganCLIP/41.jpg" > <img width="224" src = "../assets/wild/vqganCLIP/41.jpg"/> </a> </th >
+				<th> <a href = "../assets/wild/ours/41.jpg" > <img width="224" src = "../assets/wild/ours/41.jpg"/> </a> </th >
+			</tr>
+			<tr>
+				<th> "ice" </th>
+				<th> CLIPStyler </th>
+				<th> Diffusion+CLIP </th>
+				<th> VQ-GAN+CLIP </th>
+				<th> Ours </th>
+			</tr>
+			<tr>
+				<th> <a href = "../assets/wild/input/44.jpg" > <img width="224" src = "../assets/wild/input/44.jpg"/> </a> </th >
+				<th> <a href = "../assets/wild/CLIPStyler/44.jpg" > <img width="224" src = "../assets/wild/CLIPStyler/44.jpg"/> </a> </th >
+				<th> <a href = "../assets/wild/diffusionClip/44.jpg" > <img width="224" src = "../assets/wild/diffusionClip/44.jpg"/> </a> </th >
+				<th> <a href = "../assets/wild/vqganCLIP/44.jpg" > <img width="224" src = "../assets/wild/vqganCLIP/44.jpg"/> </a> </th >
+				<th> <a href = "../assets/wild/ours/44.jpg" > <img width="224" src = "../assets/wild/ours/44.jpg"/> </a> </th >
+			</tr>
+			<tr>
+				<th> "golden birds" </th>
+				<th> CLIPStyler </th>
+				<th> Diffusion+CLIP </th>
+				<th> VQ-GAN+CLIP </th>
+				<th> Ours </th>
+			</tr>
+			<tr>
+				<th> <a href = "../assets/wild/input/53.jpg" > <img width="224" src = "../assets/wild/input/53.jpg"/> </a> </th >
+				<th> <a href = "../assets/wild/CLIPStyler/53.jpg" > <img width="224" src = "../assets/wild/CLIPStyler/53.jpg"/> </a> </th >
+				<th> <a href = "../assets/wild/diffusionClip/53.jpg" > <img width="224" src = "../assets/wild/diffusionClip/53.jpg"/> </a> </th >
+				<th> <a href = "../assets/wild/vqganCLIP/53.jpg" > <img width="224" src = "../assets/wild/vqganCLIP/53.jpg"/> </a> </th >
+				<th> <a href = "../assets/wild/ours/53.jpg" > <img width="224" src = "../assets/wild/ours/53.jpg"/> </a> </th >
+			</tr>
+			
+			<tr>
+				<th> "golden horse" </th>
+				<th> CLIPStyler </th>
+				<th> Diffusion+CLIP </th>
+				<th> VQ-GAN+CLIP </th>
+				<th> Ours </th>
+			</tr>
+			<tr>
+				<th> <a href = "../assets/wild/input/61.jpg" > <img width="224" src = "../assets/wild/input/61.jpg"/> </a> </th >
+				<th> <a href = "../assets/wild/CLIPStyler/61.jpg" > <img width="224" src = "../assets/wild/CLIPStyler/61.jpg"/> </a> </th >
+				<th> <a href = "../assets/wild/diffusionClip/61.jpg" > <img width="224" src = "../assets/wild/diffusionClip/61.jpg"/> </a> </th >
+				<th> <a href = "../assets/wild/vqganCLIP/61.jpg" > <img width="224" src = "../assets/wild/vqganCLIP/61.jpg"/> </a> </th >
+				<th> <a href = "../assets/wild/ours/61.jpg" > <img width="224" src = "../assets/wild/ours/61.jpg"/> </a> </th >
+			</tr>
+			<tr>
+				<th> "oreo cake" </th>
+				<th> CLIPStyler </th>
+				<th> Diffusion+CLIP </th>
+				<th> VQ-GAN+CLIP </th>
+				<th> Ours </th>
+			</tr>
+			<tr>
+				<th> <a href = "../assets/wild/input/74.jpg" > <img width="224" src = "../assets/wild/input/74.jpg"/> </a> </th >
+				<th> <a href = "../assets/wild/CLIPStyler/74.jpg" > <img width="224" src = "../assets/wild/CLIPStyler/74.jpg"/> </a> </th >
+				<th> <a href = "../assets/wild/diffusionClip/74.jpg" > <img width="224" src = "../assets/wild/diffusionClip/74.jpg"/> </a> </th >
+				<th> <a href = "../assets/wild/vqganCLIP/74.jpg" > <img width="224" src = "../assets/wild/vqganCLIP/74.jpg"/> </a> </th >
+				<th> <a href = "../assets/wild/ours/74.jpg" > <img width="224" src = "../assets/wild/ours/74.jpg"/> </a> </th >
+			</tr>
+			<tr>
+				<th> "spinach moss cake" </th>
+				<th> CLIPStyler </th>
+				<th> Diffusion+CLIP </th>
+				<th> VQ-GAN+CLIP </th>
+				<th> Ours </th>
+			</tr>
+			<tr>
+				<th> <a href = "../assets/wild/input/76.jpg" > <img width="224" src = "../assets/wild/input/76.jpg"/> </a> </th >
+				<th> <a href = "../assets/wild/CLIPStyler/76.jpg" > <img width="224" src = "../assets/wild/CLIPStyler/76.jpg"/> </a> </th >
+				<th> <a href = "../assets/wild/diffusionClip/76.jpg" > <img width="224" src = "../assets/wild/diffusionClip/76.jpg"/> </a> </th >
+				<th> <a href = "../assets/wild/vqganCLIP/76.jpg" > <img width="224" src = "../assets/wild/vqganCLIP/76.jpg"/> </a> </th >
+				<th> <a href = "../assets/wild/ours/76.jpg" > <img width="224" src = "../assets/wild/ours/76.jpg"/> </a> </th >
+			</tr>
+		</tbody>
+	</table>
+	<p>&nbsp;</p>
+	<hr>
+	<h2 align="left"><a name="prior-work-stylegan" id="prior-work-stylegan"></a>Prior Work: StyleGAN Image Manipulation</h2>
+	<p>We illustrate the differences between our method and text-guided StyleGAN-based image manipulation methods (StyleCLIP and StyleGAN-NADA).</p>
+		
+		<ul>
+		<li> Both StyleCLIP and StyleGAN-NADA are designed to edit StyleGAN generated images. Editing real-world images requires solving the GAN inversion challenge.</li>
+		<li> The domain of input images is restricted. For StyleCLIP the domain of output images is also restricted.</li>
+		<li> Both edit the input image in a global manner, and are not designed for localized edits.</li>
+  		</ul>
+		
+		
+		<p>First row: current state-of-the-art StyleGAN encoder + StyleCLIP. The image can be reliably inverted once it is aligned, yet StyleCLIP fails to edit the hat. </p>
+		<p>Second row: e4e + StyleGAN-NADA (we used an encoder which is applicable when changing StyleGAN weights). The given image cannot be reliably inverted, and the hat cannot be properly edited. Note that in StyleGAN-NADA the entire domain needs to satisfy the edit (e.g., all face images should satisfy "person wearing red hat").</p>
+		<p>Third row: editing a StyleGAN-generated image (inversion is not required). Note that although the edit refers only to the wheels, StyleGAN-NADA modifies the entire car (shape and colors) as well as the background.</p>
+		<p> Our method automatically performs automatic localized edits to arbitrary images from various domains.</p>
+	
+	<table  width="1200" align="center">
+		<tbody>
+			<tr>
+				<th>"person" to "person wearing red hat"</th>
+				<th>StyleGAN Inversion (HyperStyle <a href="#ref-hyperStyle">[1]</a>)</th>
+				<th>StyleCLIP</th>
+				<th>Ours</th>
+			</tr>
+			<tr>
+				<th> <a href="../assets/stylegan_comparisons/hyperstyle_styleclip/original_image.jpg" >
+					<img height="224" src = "../assets/stylegan_comparisons/hyperstyle_styleclip/original_image.jpg"/> </a>
+				</th >
+				<th> <a href="../assets/stylegan_comparisons/hyperstyle_styleclip/inversion.png" >
+					<img height="224" src = "../assets/stylegan_comparisons/hyperstyle_styleclip/inversion.png"/> </a>
+				</th >
+				<th> <a href="../assets/stylegan_comparisons/hyperstyle_styleclip/styleclip_edit.png" >
+					<img height="224" src = "../assets/stylegan_comparisons/hyperstyle_styleclip/styleclip_edit.png"/> </a>
+				</th >
+				<th> <a href="../assets/stylegan_comparisons/hyperstyle_styleclip/our_result.png" >
+					<img height="224" src = "../assets/stylegan_comparisons/hyperstyle_styleclip/our_result.png"/> </a>
+				</th >
+			</tr>
+			
+			<tr>
+				<th>"person" to "person wearing red hat"</th>
+				<th>StyleGAN Inversion (e4e <a href="#ref-e4e">[2]</a>)</th>
+				<th>StyleGAN-NADA</th>
+				<th>Ours</th>
+			</tr>
+			<tr>
+				<th> <a href="../assets/stylegan_comparisons/hyperstyle_styleclip/original_image.jpg" >
+					<img height="224" src = "../assets/stylegan_comparisons/hyperstyle_styleclip/original_image.jpg"/> </a>
+				</th >
+				<th> <a href="../assets/stylegan_comparisons/stylegan-nada/e4e_inversion.png" >
+					<img height="224" src = "../assets/stylegan_comparisons/stylegan-nada/e4e_inversion.png"/> </a>
+				</th >
+				<th> <a href="../assets/stylegan_comparisons/stylegan-nada/stylegan_nada.png" >
+					<img height="224" src = "../assets/stylegan_comparisons/stylegan-nada/stylegan_nada.png"/> </a>
+				</th >
+				<th> <a href="../assets/stylegan_comparisons/hyperstyle_styleclip/our_result.png" >
+					<img height="224" src = "../assets/stylegan_comparisons/hyperstyle_styleclip/our_result.png"/> </a>
+				</th >
+			</tr>
+		</tbody>
+	</table>
+	<table  width="1000" align="center">
+		<tbody>
+			<tr>
+				<th>"Chrome wheels" to "TRON wheels"</th>
+				<th>StyleGAN-NADA</th>
+				<th>Ours</th>
+			</tr>
+			<tr>
+				<th> <a href="../assets/stylegan_comparisons/stylegan-nada/car_source.png" >
+					<img width="290" src = "../assets/stylegan_comparisons/stylegan-nada/car_source.png"> </a>
+				</th >
+				<th> <a href="../assets/stylegan_comparisons/stylegan-nada/car_stylegan_nada.png" >
+					<img width="290" src = "../assets/stylegan_comparisons/stylegan-nada/car_stylegan_nada.png"/> </a>
+				</th >
+				<th> <a href="../assets/stylegan_comparisons/stylegan-nada/car_our_result.png" >
+					<img width="290" src = "../assets/stylegan_comparisons/stylegan-nada/car_our_result.png"/> </a>
+				</th >
+			</tr>
+			
+			</tbody>
+	</table>
+	
+	
+	<p>&nbsp;</p>
+  <hr>
+	
+	
+  <h2 align="left"><a name="video-baselines" id="video-baselines"></a>Comparison to Video Baselines</h2>
+  <p align="left">We quantify the effectiveness of our key design choices for the video-editing by comparing our video method against: (i) Atlas Baseline: feeding the discretized 2D Atlas to our single-image method (Sec. 3.1), and using the same inference pipeline illustrated in Fig. 4 to map the edited atlas back to frames. (ii) Frames Baseline: treating all video frames as part of a single internal dataset, used to train our generator; at inference, we apply the trained generator independently to each frame. We note that the Atlas baseline does not utilize the richness of video and produces lower-quality texture results. The Frames baseline produces temporally inconsistent edits.</p>
+  <h3>"swarovski blue crystal swan"</h3>
+	<table width="850" border="0" align="center"><tbody><tr>
+      </tr>
+	  <tr>
+		<td align="center"><video width="850" controls="controls">
+          <source src="../video_files/baselines_comparison/blackswan_swarovski_compressed.mp4" type="video/mp4">
+        </video></td>
+	  </tr>
+		  </tbody>
+  </table>
+  <p>&nbsp;</p>
+	<h3>"rusty jeep"</h3>
+  <table width="850" border="0" align="center"><tbody><tr>
+      </tr>
+	  <tr>
+		<td align="center"><video width="850" controls="controls">
+          <source src="../video_files/baselines_comparison/car-turn_rusty-jeep_compressed.mp4" type="video/mp4">
+        </video></td>
+	  </tr>
+		  </tbody>
+  </table>
+  
+  <p>&nbsp;</p>
+	<h3>"blue dress"</h3>
+	<table width="850" border="0" align="center"><tbody><tr>
+      </tr>
+	  <tr>
+		<td align="center"><video width="850" controls="controls">
+          <source src="../video_files/baselines_comparison/lucia_blue-dress_compressed.mp4" type="video/mp4">
+        </video></td>
+	  </tr>
+		  </tbody>
+  </table>
+  <p>&nbsp;</p>
+	<h3>"ocean at sunset"</h3>
+	<table width="850" border="0" align="center"><tbody><tr>
+      </tr>
+	  <tr>
+		<td align="center"><video width="850" controls="controls">
+          <source src="../video_files/baselines_comparison/kite-surf_sunset_compressed.mp4" type="video/mp4">
+        </video></td>
+	  </tr>
+		  </tbody>
+  </table>
+  <p>&nbsp;</p>
+	
+	<h3>"giraffe with a hairy colorful mane"</h3>
+	<table width="750" border="0" align="center"><tbody><tr>
+      </tr>
+	  <tr>
+		<td align="center"><video width="750" controls="controls">
+          <source src="../video_files/baselines_comparison/giraffe_colorful-mane_compressed.mp4" type="video/mp4">
+        </video></td>
+	  </tr>
+		  </tbody>
+  </table>
+	
+	<p>&nbsp;</p>
+  <p><br>
+  </p>
+	<p><a name="ref-hyperStyle" id="ref-hyperStyle"></a>[1] "HyperStyle: StyleGAN Inversion with HyperNetworks for Real Image Editing", Alaluf et al., arXiv 2021</p>
+	<p><a name="ref-e4e" id="ref-e4e"></a>[2] "Designing an encoder for stylegan image manipulation", Tov et al., ACM Transactions on Graphics (TOG), 2021</p>
+</div>
+
+</body></html>

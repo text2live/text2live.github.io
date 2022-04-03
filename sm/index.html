@@ -24,6 +24,7 @@
     <li><a href="./pages/ablation_and_comparisons_index.html#image-baselines">Comparison to Image Baselines (Section 4)</a></li>
 	<li><a href="./pages/ablation_and_comparisons_index.html#prior-work-stylegan">Prior Work: StyleGAN Image Manipulation</a></li>
     <li><a href="./pages/ablation_and_comparisons_index.html#video-baselines">Comparison to Video Baselines (Section 4)</a></li>
+    <li><a href="#limitations">Limitations (Section 4.5 and Figure 9)</a></li>
     <li><a href="./SM.pdf">Supplementary Document</a></li>
   </ul>
   <p><br><span class="emph">We recommend watching all images and videos in full screen. Click on the images or videos for seeing them in full scale.</span></p>
@@ -457,8 +458,31 @@
 		  </tbody>
   </table>
   <p>&nbsp;</p>
-	
+
+	<h2 align="left"><a name="limitations" id="limitations"></a>Limitations</h2>
+  <p align="left">Our method relies on the CLIP representation. We noticed that for some edits, CLIP exhibits a very strong bias towards a specific solution. For example, given an image of a ball and the text “moon”, CLIP will strongly guide the generation toward a crescent moon. To achieve the desired edit, the user has to be more specific and use “a bright full moon”. </p>
   
+  <table  width="1050" align="center">
+		<tbody>
+			<th>Input image</th>
+			<th>"moon"</th>
+			<th>"a bright full moon"</th>
+			<tr>
+				<th> <a href="assets/limitation_moon/sunsetball.png" >
+					<img height="224" src = "assets/limitation_moon/sunsetball.png"/> </a>
+				</th >
+				<th> <a href="assets/limitation_moon/crescent_composite.png" >
+					<img height="224" src = "assets/limitation_moon/crescent_composite.png"/> </a>
+				</th >
+				<th> <a href="assets/limitation_moon/full_moon_composite.png" >
+					<img height="224" src = "assets/limitation_moon/full_moon_composite.png"/> </a>
+				</th >
+		</tr>
+		</tbody>
+	</table>
+	
+	
+	
   <p><br>
   </p>
   <p>&nbsp;</p>

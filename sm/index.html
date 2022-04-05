@@ -458,7 +458,11 @@
   <p>&nbsp;</p>
 
 	<h2 align="left"><a name="limitations" id="limitations"></a>Limitations</h2>
-  <p align="left">Our method relies on the CLIP representation. We noticed that for some edits, CLIP exhibits a very strong bias towards a specific solution. For example, given an image of a ball and the text “moon”, CLIP will strongly guide the generation toward a crescent moon. To achieve the desired edit, the user has to be more specific and use “a bright full moon”. </p>
+  <p align="left">CLIP often exhibit strong association between text and certain
+	visual elements such as the shape of objects (e.g., “moon” with crescent shape), or
+	additional new objects (e.g., “birthday cake” with candles). As our method is designed
+	to edit existing objects, generating new ones may not lead to a visually pleasing result.
+	However, often the desired edit can be achieved by using more specific text</p>
   
   <table  width="1050" align="center">
 		<tbody>
@@ -475,8 +479,24 @@
 				<th> <a href="assets/limitation_moon/full_moon_composite.png" >
 					<img height="224" src = "assets/limitation_moon/full_moon_composite.png"/> </a>
 				</th >
-		</tr>
+			</tr>
 		</tbody>
+		  <tbody>
+				<th>Input image</th>
+				<th>"chess cake"</th>
+				<th>"birthday cake"</th>
+				<tr>
+					<th> <a href="assets/limitation_moon/cake.jpeg" >
+						<img height="224" src = "assets/limitation_moon/cake.jpeg"/> </a>
+					</th >
+					<th> <a href="assets/limitation_moon/chess_cake.png" >
+						<img height="224" src = "assets/limitation_moon/chess_cake.png"/> </a>
+					</th >
+					<th> <a href="assets/limitation_moon/birthday_cake.png" >
+						<img height="224" src = "assets/limitation_moon/birthday_cake.png"/> </a>
+					</th >
+				</tr>
+			</tbody>
 	</table>
 	
 	
